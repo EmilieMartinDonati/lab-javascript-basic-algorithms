@@ -73,7 +73,9 @@ function Sorting(arg1, arg2) {
 
 Sorting(hacker1, hacker2);
 
-// Bonus 1.
+// BONUS
+
+//Bonus 1
 
 var firstPar =
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus mattis, justo ut sodales pretium, erat eros scelerisque odio, nec bibendum libero dui vitae eros. Nunc vitae posuere libero. Aenean iaculis porta quam et dignissim. Quisque euismod tempus quam vel facilisis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.";
@@ -113,3 +115,33 @@ function CountEt(arg) {
 CountEt(secondPar);
 
 // Bonus 2.
+
+const phraseToCheck = "step on no pets";
+
+const phraseToCheck2 = "This is not a palindrom";
+
+const phraseTC3 = "not a palindrom either";
+
+const phraseTC4 = "loop ara pool";
+
+function Palindromer(sentence) {
+  let isAPalindrom = false;
+  for (let i = 0; i < sentence.length / 2; i++) {
+    for (let j = sentence.length - 1 - i; j > sentence.length / 2; j--) {
+      if (sentence[i] === sentence[j]) {
+        isAPalindrom = true;
+      } else {
+        isAPalindrom = false;
+      }
+    }
+  }
+  console.log(isAPalindrom);
+}
+
+Palindromer(phraseToCheck);
+
+Palindromer(phraseToCheck2);
+
+Palindromer(phraseTC3);
+
+Palindromer(phraseTC4);
