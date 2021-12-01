@@ -87,7 +87,7 @@ var thirdPar =
   "Proin malesuada mauris nec quam congue, non faucibus libero feugiat. Praesent non magna eget risus accumsan vestibulum. Fusce nunc dui, eleifend quis vulputate nec, commodo sit amet libero. Integer scelerisque orci leo, finibus vestibulum lorem accumsan in. Vivamus nec congue lacus, sit amet sagittis est. Suspendisse varius faucibus porta.";
 
 function CountWords(arg) {
-  let counter = 0;
+  let counter = 1;
   for (let i = 0; i < arg.length; i++) {
     if (arg[i] === " ") {
       counter = counter + 1;
