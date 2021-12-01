@@ -25,57 +25,37 @@ console.log(`the navigator's name is ${hacker2}`);
     }
 
 
-// Iteration 3: Loops
+//LOOPS
 
-// let hacker1Modified = [];
-// let hacker1Final = "";
-// for (let i = 0 ; i < hacker1.length ; i++) {
-//      hacker1Modified.push(hacker1[i].toUpperCase() + ' ');
-// }
+// try 2, print in the other order.
 
-let hacker1Modified = "";
-for (let i = 0; i < hacker1.length; i++) {
-    hacker1Modified += hacker1[i].toUpperCase() + " ";
+const nameTest = "Emilie";
+
+function FirstPrinter (name) {
+    let cappedName = " ";
+     for (let i = 0 ; i < name.length ; i++) {
+         cappedName += name[i].toUpperCase() + " ";
+     }
+     console.log(cappedName);
 }
 
-console.log(hacker1Modified)
+FirstPrinter(nameTest);
 
+// Try2, print in the reverseorder. 
 
-console.log(hacker2);
+const nameTest2 = "Samir";
 
-let hacker2Reverse = "";
-for (let i = hacker2.length-1 ; i >= 0 ; i--) {
-    hacker2Reverse += hacker2[i];
+function ReversePrinter (name) {
+    let reverseName = " ";
+    for (let i = name.length -1 ; i >= 0 ; i --) {
+        reverseName += name[i];
+    }
+    console.log(reverseName);
 }
 
-hacker2Final = hacker2Reverse;
+ReversePrinter(nameTest2)
 
-console.log(hacker2);
-
-console.log(hacker2Final);
-
-// const ourNames = [
-//     {
-//     name: "Samir",
-//     },
-//     {
-//     name: "Emilie"
-//     }
-// ]
-
-
-// const ourNamesSorted = ourNames.sort((a, b) => a.name.localeCompare(b.name));
-
-// if (ourNamesSorted[0].name === "Emilie") {
-//     console.log("the driver's name goes first");
-// }
-// else if (ourNamesSorted[0].name === "Samir") {
-//     console.log("Yo, the navigator goes first definitely")
-// }
-// else {
-//     console.log("What ?! You both have the same name ?")
-// }
-
+//Sort dictionary.
 
 function Sorting (arg1, arg2) {
     
@@ -96,9 +76,47 @@ function Sorting (arg1, arg2) {
             return;
         }
     }
-
 }
 
 Sorting(hacker1, hacker2);
+
+// Bonus 1.
+
+var firstPar = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus mattis, justo ut sodales pretium, erat eros scelerisque odio, nec bibendum libero dui vitae eros. Nunc vitae posuere libero. Aenean iaculis porta quam et dignissim. Quisque euismod tempus quam vel facilisis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.";
+
+var secondPar = "Sed id viverra nisl. Suspendisse potenti. Sed pretium urna vitae diam sollicitudin, vel ullamcorper erat commodo. Praesent mollis pellentesque bibendum. Nulla id eros sit amet ante dignissim sagittis. Fusce in posuere sem, rhoncus finibus justo. Aliquam interdum pharetra malesuada.";
+
+var thirdPar = "Proin malesuada mauris nec quam congue, non faucibus libero feugiat. Praesent non magna eget risus accumsan vestibulum. Fusce nunc dui, eleifend quis vulputate nec, commodo sit amet libero. Integer scelerisque orci leo, finibus vestibulum lorem accumsan in. Vivamus nec congue lacus, sit amet sagittis est. Suspendisse varius faucibus porta.";
+
+function CountWords (arg) {
+    let counter = 0;
+    for (let i = 0; i < arg.length; i++) {
+        if (arg[i] === " " ) {
+            counter = counter + 1;
+        }
+        else {
+            counter = counter;
+        }
+    }
+    console.log(counter);
+}
+
+CountWords(firstPar);
+
+function CountEt (arg) {
+    let counterEt = 0;
+    for (let i = 0; i < arg.length; i++) {
+        if (arg.slice(i, i+6) === "dolor " ) {
+            counterEt = counterEt + 1;
+        }
+        else {
+            counterEt = counterEt;
+        }
+    }
+    console.log(counterEt);
+}
+
+CountEt(firstPar);
+
 
 
